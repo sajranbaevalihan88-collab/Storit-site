@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - STROICHECK</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Checkmark -->
+                        <g>
+                            <!-- Left part of checkmark -->
+                            <path d="M 60 110 L 85 135" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- Right part of checkmark -->
+                            <path d="M 85 135 L 140 60" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <!-- Crane -->
+                        <g>
+                            <!-- Crane base (pulley) -->
+                            <circle cx="70" cy="155" r="12" fill="currentColor" />
+                            <rect x="58" y="150" width="24" height="10" rx="5" fill="currentColor" />
+
+                            <!-- Crane arm (boom) -->
+                            <line x1="70" y1="155" x2="140" y2="70" stroke="currentColor" stroke-width="6"
+                                stroke-linecap="round" />
+
+                            <!-- Crane jib (lattice pattern) -->
+                            <g stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round">
+                                <line x1="140" y1="70" x2="160" y2="50" />
+                                <line x1="142" y1="74" x2="162" y2="54" />
+                                <line x1="138" y1="66" x2="158" y2="46" />
+                            </g>
+
+                            <!-- Hook -->
+                            <g fill="currentColor">
+                                <circle cx="165" cy="45" r="4" />
+                                <path d="M 165 49 Q 165 55 162 58 Q 160 60 158 58" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" />
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="about.html" class="nav-link">О системе</a></li>
+                    <li><a href="features.html" class="nav-link">Возможности</a></li>
+                    <li><a href="equipment.html" class="nav-link">Техника</a></li>
+                    <li><a href="schedule.html" class="nav-link">График ТО</a></li>
+                    <li><a href="contact.html" class="nav-link active">Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-outline" onclick="showModal(); return false;">Войти</a>
+                    <a href="#" class="btn btn-primary" onclick="showModal(); return false;">Регистрация</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <div class="container">
+                <h1>Контакты</h1>
+                <nav class="breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <span>/</span>
+                    <span>Контакты</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Свяжитесь с нами</span>
+                <h2 class="section-title">Мы всегда на связи</h2>
+                <p class="section-subtitle">
+                    Получите консультацию или демонстрацию системы
+                </p>
+            </div>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Телефон</h3>
+                    <p>+7 (800) 555-35-35</p>
+                    <span class="contact-note">Бесплатно по России</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>info@stroicheck.ru</p>
+                    <span class="contact-note">Круглосуточно</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Адрес офиса</h3>
+                    <p>г. Москва, ул. Строителей, 25</p>
+                    <span class="contact-note">Пн-Пт: 9:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <div class="contact-form-info">
+                    <h2>Напишите нам</h2>
+                    <p>Заполните форму ниже, и мы свяжемся с вами в ближайшее время. Обычно отвечаем в течение 2 часов в
+                        рабочее время.</p>
+                    <div class="contact-social">
+                        <h4>Или напишите в мессенджеры:</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link telegram" onclick="showModal(); return false;">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="#" class="social-link whatsapp" onclick="showModal(); return false;">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Компания</label>
+                        <input type="text" id="company" name="company" placeholder="Название компании">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Тема обращения</label>
+                        <select id="subject" name="subject">
+                            <option value="demo">Запрос на демонстрацию</option>
+                            <option value="consult">Консультация</option>
+                            <option value="price">Узнать стоимость</option>
+                            <option value="support">Техническая поддержка</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">Я согласен на обработку персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        <i class="fas fa-paper-plane"></i> Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section section">
+        <div class="container">
+            <div class="map-wrapper">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Наш офис</h3>
+                    <p>г. Москва, ул. Строителей, 25</p>
+                    <p>Бизнес-центр "СтройПлаза", офис 304</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <p class="section-subtitle">
+                    Ответы на популярные вопросы о системе
+                </p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Сколько времени занимает внедрение системы?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Стандартное внедрение занимает от 1 до 3 дней в зависимости от количества техники. Мы
+                            помогаем с импортом данных и настройкой системы под ваши потребности.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Можно ли импортировать данные из Excel?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, система поддерживает импорт данных о технике из Excel-файлов. Мы предоставляем шаблон для
+                            заполнения и помогаем с переносом данных.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Есть ли мобильное приложение?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, у нас есть мобильные приложения для iOS и Android. Они позволяют просматривать график ТО,
+                            создавать заявки на ремонт и получать уведомления.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Как происходит оплата?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Оплата производится ежемесячно по безналичному расчёту. Для юридических лиц предоставляем все
+                            необходимые документы. Также доступен тестовый период 14 дней.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Можно ли добавить свой тип техники?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, система поддерживает создание пользовательских типов оборудования с индивидуальными
+                            параметрами и интервалами обслуживания.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Готовы начать?</h2>
+                    <p>Попробуйте STROICHECK бесплатно в течение 14 дней. Без обязательств и скрытых платежей.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-lg" onclick="showModal(); return false;">Начать бесплатно</a>
+                    <a href="#" class="btn btn-outline btn-lg" onclick="showModal(); return false;">Запросить демо</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-brand">
+                    <span class="footer-logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                    <p>Автоматизированная система управления техническим обслуживанием строительной техники</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="about.html">О системе</a></li>
+                            <li><a href="features.html">Возможности</a></li>
+                            <li><a href="equipment.html">Техника</a></li>
+                            <li><a href="schedule.html">График ТО</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Документация</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">FAQ</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Юридическое</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Политика конфиденциальности</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">Условия использования</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STROICHECK. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" onclick="hideModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3>Скоро!</h3>
+                <p>Эта функция находится в разработке. Следите за обновлениями потому что делал всё это только одиин
+                    бедный студент!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

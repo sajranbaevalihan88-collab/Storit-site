@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О системе - STROICHECK</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Checkmark -->
+                        <g>
+                            <!-- Left part of checkmark -->
+                            <path d="M 60 110 L 85 135" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- Right part of checkmark -->
+                            <path d="M 85 135 L 140 60" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <!-- Crane -->
+                        <g>
+                            <!-- Crane base (pulley) -->
+                            <circle cx="70" cy="155" r="12" fill="currentColor" />
+                            <rect x="58" y="150" width="24" height="10" rx="5" fill="currentColor" />
+
+                            <!-- Crane arm (boom) -->
+                            <line x1="70" y1="155" x2="140" y2="70" stroke="currentColor" stroke-width="6"
+                                stroke-linecap="round" />
+
+                            <!-- Crane jib (lattice pattern) -->
+                            <g stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round">
+                                <line x1="140" y1="70" x2="160" y2="50" />
+                                <line x1="142" y1="74" x2="162" y2="54" />
+                                <line x1="138" y1="66" x2="158" y2="46" />
+                            </g>
+
+                            <!-- Hook -->
+                            <g fill="currentColor">
+                                <circle cx="165" cy="45" r="4" />
+                                <path d="M 165 49 Q 165 55 162 58 Q 160 60 158 58" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" />
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="about.html" class="nav-link active">О системе</a></li>
+                    <li><a href="features.html" class="nav-link">Возможности</a></li>
+                    <li><a href="equipment.html" class="nav-link">Техника</a></li>
+                    <li><a href="schedule.html" class="nav-link">График ТО</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-outline" onclick="showModal(); return false;">Войти</a>
+                    <a href="#" class="btn btn-primary" onclick="showModal(); return false;">Регистрация</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <div class="container">
+                <h1>О системе</h1>
+                <nav class="breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <span>/</span>
+                    <span>О системе</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Intro Section -->
+    <section class="about-intro section">
+        <div class="container">
+            <div class="about-intro-grid">
+                <div class="about-intro-content">
+                    <span class="section-tag">Кто мы</span>
+                    <h2>STROICHECK — ваш надёжный партнёр в управлении техникой</h2>
+                    <p>STROICHECK — это современная автоматизированная система, разработанная специально для компаний,
+                        занимающихся строительством и эксплуатацией специальной техники. Наша система помогает
+                        эффективно управлять парком оборудования, планировать техническое обслуживание и минимизировать
+                        простои.</p>
+                    <p>Мы понимаем, насколько важно для строительных компаний поддерживать технику в рабочем состоянии.
+                        Каждый час простоя — это потерянные деньги. Именно поэтому мы создали интуитивно понятную
+                        систему, которая берёт на себя всю рутину по планированию ТО.</p>
+                    <div class="about-stats-row">
+                        <div class="about-stat">
+                            <span class="about-stat-number">5+</span>
+                            <span class="about-stat-label">лет на рынке</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">50+</span>
+                            <span class="about-stat-label">компаний-клиентов</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">500+</span>
+                            <span class="about-stat-label">единиц техники</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-intro-image">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section section">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-image">
+                    <div class="mission-image-placeholder">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                </div>
+                <div class="mission-content">
+                    <span class="section-tag">Наша миссия</span>
+                    <h2>Делаем управление техникой простым и эффективным</h2>
+                    <p>Наша миссия — помочь строительным компаниям России и СНГ оптимизировать расходы на обслуживание
+                        техники и повысить её надёжность. Мы верим, что технологии должны работать на бизнес, а не
+                        создавать дополнительную нагрузку.</p>
+                    <ul class="mission-list">
+                        <li><i class="fas fa-check-circle"></i> Снижение затрат на ТО до 30%</li>
+                        <li><i class="fas fa-check-circle"></i> Увеличение срока службы оборудования</li>
+                        <li><i class="fas fa-check-circle"></i> Минимизация внеплановых простоев</li>
+                        <li><i class="fas fa-check-circle"></i> Прозрачность всех процессов</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Detail Section -->
+    <section class="about-features section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Преимущества</span>
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <p class="section-subtitle">
+                    Ключевые преимущества системы STROICHECK
+                </p>
+            </div>
+            <div class="about-features-grid">
+                <div class="about-feature-card">
+                    <div class="about-feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Планирование ТО</h3>
+                    <p>Автоматическое создание графиков технического обслуживания с учётом наработки, производственных
+                        норм и рекомендаций производителя. Система сама рассчитывает оптимальные даты для проведения
+                        работ.</p>
+                    <h4>Возможности:</h4>
+                    <ul class="feature-sublist">
+                        <li>Учёт моточасов и пробега</li>
+                        <li>Интеграция с GPS-трекерами</li>
+                        <li>Настраиваемые интервалы ТО</li>
+                    </ul>
+                </div>
+                <div class="about-feature-card">
+                    <div class="about-feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Уведомления</h3>
+                    <p>Своевременные напоминания о предстоящих работах через SMS, email и push-уведомления в мобильном
+                        приложении. Никаких пропущенных ТО и внезапных поломок.</p>
+                    <h4>Возможности:</h4>
+                    <ul class="feature-sublist">
+                        <li>Напоминания за 7, 3 и 1 день</li>
+                        <li>Уведомления ответственным лицам</li>
+                        <li>Настраиваемые шаблоны сообщений</li>
+                    </ul>
+                </div>
+                <div class="about-feature-card">
+                    <div class="about-feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Аналитика</h3>
+                    <p>Подробная статистика по расходам на обслуживание, простоям техники и эффективности использования
+                        оборудования. Принимайте решения на основе данных.</p>
+                    <h4>Возможности:</h4>
+                    <ul class="feature-sublist">
+                        <li>Отчёты по затратам</li>
+                        <li>Анализ простоев</li>
+                        <li>Сравнение периодов</li>
+                    </ul>
+                </div>
+                <div class="about-feature-card">
+                    <div class="about-feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Мобильное приложение</h3>
+                    <p>Управляйте парком техники из любой точки через удобное мобильное приложение для iOS и Android.
+                        Доступ к информации 24/7.</p>
+                    <h4>Возможности:</h4>
+                    <ul class="feature-sublist">
+                        <li>Просмотр графика ТО</li>
+                        <li>Создание заявок на ремонт</li>
+                        <li>Фотоотчёты с объекта</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Как это работает</span>
+                <h2 class="section-title">Простая настройка за 3 шага</h2>
+                <p class="section-subtitle">
+                    Начните использовать систему уже сегодня
+                </p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Регистрация</h3>
+                    <p>Создайте аккаунт компании и настройте профиль. Процесс занимает не более 5 минут.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Добавление техники</h3>
+                    <p>Занесите данные о вашем парке оборудования в систему вручную или импортируйте из Excel.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Готовый график ТО</h3>
+                    <p>Система автоматически создаст график обслуживания и начнёт присылать уведомления.</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn btn-primary btn-lg" onclick="showModal(); return false;">Начать бесплатно</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Отзывы</span>
+                <h2 class="section-title">Что говорят наши клиенты</h2>
+                <p class="section-subtitle">
+                    Узнайте мнение компаний, которые уже используют STROICHECK
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"С момента внедрения STROICHECK мы сократили внеплановые простои на 40%.
+                        Теперь всегда знаем, когда какой агрегат требует обслуживания."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Александр Петров</h4>
+                            <span>Технический директор, ООО "СтройМастер"</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Отличная система! Простой интерфейс, понятная навигация. Мобильное
+                        приложение позволяет мне контролировать парк даже в командировках."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ирина Смирнова</h4>
+                            <span>Руководитель отдела логистики, ГК "ПромСтрой"</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Экономия на обслуживании составила около 25% за первый год
+                        использования. Система помогает планировать закупку запчастей и оптимизировать бюджет."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Дмитрий Волков</h4>
+                            <span>Главный инженер, АО "ДорСтрой"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Готовы оптимизировать обслуживание техники?</h2>
+                    <p>Попробуйте STROICHECK бесплатно в течение 14 дней. Без обязательств и скрытых платежей.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-lg" onclick="showModal(); return false;">Начать бесплатно</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-brand">
+                    <span class="footer-logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                    <p>Автоматизированная система управления техническим обслуживанием строительной техники</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="about.html">О системе</a></li>
+                            <li><a href="features.html">Возможности</a></li>
+                            <li><a href="equipment.html">Техника</a></li>
+                            <li><a href="schedule.html">График ТО</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Документация</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">FAQ</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Юридическое</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Политика конфиденциальности</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">Условия использования</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STROICHECK. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" onclick="hideModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3>Скоро!</h3>
+                <p>Эта функция находится в разработке. Следите за обновлениями потому что делал всё это только одиин
+                    бедный студент!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STROICHECK - Автоматизированная система техобслуживания строительной техники</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Checkmark -->
+                        <g>
+                            <!-- Left part of checkmark -->
+                            <path d="M 60 110 L 85 135" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- Right part of checkmark -->
+                            <path d="M 85 135 L 140 60" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <!-- Crane -->
+                        <g>
+                            <!-- Crane base (pulley) -->
+                            <circle cx="70" cy="155" r="12" fill="currentColor" />
+                            <rect x="58" y="150" width="24" height="10" rx="5" fill="currentColor" />
+
+                            <!-- Crane arm (boom) -->
+                            <line x1="70" y1="155" x2="140" y2="70" stroke="currentColor" stroke-width="6"
+                                stroke-linecap="round" />
+
+                            <!-- Crane jib (lattice pattern) -->
+                            <g stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round">
+                                <line x1="140" y1="70" x2="160" y2="50" />
+                                <line x1="142" y1="74" x2="162" y2="54" />
+                                <line x1="138" y1="66" x2="158" y2="46" />
+                            </g>
+
+                            <!-- Hook -->
+                            <g fill="currentColor">
+                                <circle cx="165" cy="45" r="4" />
+                                <path d="M 165 49 Q 165 55 162 58 Q 160 60 158 58" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" />
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Главная</a></li>
+                    <li><a href="about.html" class="nav-link">О системе</a></li>
+                    <li><a href="features.html" class="nav-link">Возможности</a></li>
+                    <li><a href="equipment.html" class="nav-link">Техника</a></li>
+                    <li><a href="schedule.html" class="nav-link">График ТО</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-outline" onclick="showModal(); return false;">Войти</a>
+                    <a href="#" class="btn btn-primary" onclick="showModal(); return false;">Регистрация</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <div class="hero-overlay"></div>
+            <div class="hero-bg"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="highlight">Автоматизированная система</span><br>
+                        График технического<br>обслуживания<br>строительной техники
+                    </h1>
+                    <p class="hero-subtitle">
+                        Контролируйте состояние оборудования, планируйте ТО и минимизируйте простои
+                        с помощью интеллектуальной системы управления
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary btn-lg" onclick="showModal(); return false;">
+                            <i class="fas fa-play-circle"></i> Демо-версия
+                        </a>
+                        <a href="about.html" class="btn btn-outline btn-lg">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Единиц техники</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Компаний</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">Надёжность</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Листайте вниз</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Quick About Section -->
+    <section class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">О системе</span>
+                <h2 class="section-title">Почему выбирают STROICHECK</h2>
+                <p class="section-subtitle">
+                    Современное решение для управления техническим обслуживанием строительной техники
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Планирование ТО</h3>
+                    <p>Автоматическое создание графиков технического обслуживания с учётом наработки и производителя</p>
+                    <a href="about.html" class="card-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Уведомления</h3>
+                    <p>Своевременные напоминания о предстоящих работах через SMS, email и push-уведомления</p>
+                    <a href="about.html" class="card-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Аналитика</h3>
+                    <p>Подробная статистика по расходам, простоям и эффективности использования техники</p>
+                    <a href="about.html" class="card-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Мобильное приложение</h3>
+                    <p>Управляйте парком техники из любой точки через удобное мобильное приложение</p>
+                    <a href="about.html" class="card-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="about.html" class="btn btn-primary btn-lg">Узнать больше о системе</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax CTA Section -->
+    <section class="parallax-section parallax-1">
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <div class="container">
+                <div class="parallax-text">
+                    <h2>Экономьте до 30% на обслуживании</h2>
+                    <p>Оптимизируйте расходы на ТО благодаря точному планированию и предиктивной аналитике</p>
+                    <a href="features.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calculator"></i> Рассчитать экономию
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview Section -->
+    <section class="features section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Возможности</span>
+                <h2 class="section-title">Функционал системы</h2>
+                <p class="section-subtitle">
+                    Всё необходимое для эффективного управления парком строительной техники
+                </p>
+            </div>
+            <div class="features-preview">
+                <div class="feature-preview-item">
+                    <div class="preview-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Учёт оборудования</h3>
+                    <p>Полный реестр строительной техники с техническими характеристиками и историей обслуживания</p>
+                </div>
+                <div class="feature-preview-item">
+                    <div class="preview-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>График ТО</h3>
+                    <p>Автоматическое формирование графиков технического обслуживания</p>
+                </div>
+                <div class="feature-preview-item">
+                    <div class="preview-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Управление заявками</h3>
+                    <p>Создавайте и отслеживайте заявки на ремонт и обслуживание</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="features.html" class="btn btn-primary btn-lg">Все возможности</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Preview Section -->
+    <section class="equipment section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Техника</span>
+                <h2 class="section-title">Типы оборудования</h2>
+                <p class="section-subtitle">
+                    Система поддерживает учёт всех видов строительной и специальной техники
+                </p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-truck-monster"></i>
+                    </div>
+                    <h3>Экскаваторы</h3>
+                    <p>Гусеничные и колёсные экскаваторы любой мощности</p>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3>Бульдозеры</h3>
+                    <p>Бульдозеры и погрузчики с отвалом</p>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-dumpster"></i>
+                    </div>
+                    <h3>Самосвалы</h3>
+                    <p>Карьерные и строительные самосвалы</p>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Краны</h3>
+                    <p>Башенные, автокраны и гусеничные краны</p>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Дорожная техника</h3>
+                    <p>Катки, асфальтоукладчики, фрезы</p>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Другая техника</h3>
+                    <p>Настраиваемые типы под ваш парк</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="equipment.html" class="btn btn-primary btn-lg">Подробнее о технике</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview Section -->
+    <section class="pricing section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Тарифы</span>
+                <h2 class="section-title">Выберите подходящий план</h2>
+                <p class="section-subtitle">
+                    Гибкие тарифы для компаний любого размера
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Старт</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₽</span>
+                            <span class="amount">2 990</span>
+                            <span class="period">/мес</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> До 10 единиц техники</li>
+                        <li><i class="fas fa-check"></i> Базовый график ТО</li>
+                        <li><i class="fas fa-check"></i> Email-уведомления</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block" onclick="showModal(); return false;">Выбрать</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="pricing-badge">Популярный</div>
+                    <div class="pricing-header">
+                        <h3>Бизнес</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₽</span>
+                            <span class="amount">7 990</span>
+                            <span class="period">/мес</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> До 50 единиц техники</li>
+                        <li><i class="fas fa-check"></i> Расширенный график ТО</li>
+                        <li><i class="fas fa-check"></i> SMS + Email уведомления</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-block" onclick="showModal(); return false;">Выбрать</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Корпорация</h3>
+                        <div class="pricing-price">
+                            <span class="currency">₽</span>
+                            <span class="amount">19 990</span>
+                            <span class="period">/мес</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Неограниченно техники</li>
+                        <li><i class="fas fa-check"></i> Продвинутый график ТО</li>
+                        <li><i class="fas fa-check"></i> Все каналы уведомлений</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block" onclick="showModal(); return false;">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="parallax-section parallax-2">
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <div class="container">
+                <div class="parallax-text center">
+                    <h2>Начните использовать уже сегодня</h2>
+                    <p>Бесплатный пробный период 14 дней. Без обязательств и скрытых платежей.</p>
+                    <div class="parallax-buttons">
+                        <a href="#" class="btn btn-primary btn-lg" onclick="showModal(); return false;">Начать
+                            бесплатно</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Связаться с нами</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-brand">
+                    <span class="footer-logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                    <p>Автоматизированная система управления техническим обслуживанием строительной техники</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="about.html">О системе</a></li>
+                            <li><a href="features.html">Возможности</a></li>
+                            <li><a href="equipment.html">Техника</a></li>
+                            <li><a href="schedule.html">График ТО</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Документация</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">FAQ</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Юридическое</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Политика конфиденциальности</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">Условия использования</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STROICHECK. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" onclick="hideModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3>Скоро!</h3>
+                <p>Эта функция находится в разработке. Следите за обновлениями потому что делал всё это только одиин
+                    бедный студент!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техника - STROICHECK</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Checkmark -->
+                        <g>
+                            <!-- Left part of checkmark -->
+                            <path d="M 60 110 L 85 135" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- Right part of checkmark -->
+                            <path d="M 85 135 L 140 60" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <!-- Crane -->
+                        <g>
+                            <!-- Crane base (pulley) -->
+                            <circle cx="70" cy="155" r="12" fill="currentColor" />
+                            <rect x="58" y="150" width="24" height="10" rx="5" fill="currentColor" />
+
+                            <!-- Crane arm (boom) -->
+                            <line x1="70" y1="155" x2="140" y2="70" stroke="currentColor" stroke-width="6"
+                                stroke-linecap="round" />
+
+                            <!-- Crane jib (lattice pattern) -->
+                            <g stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round">
+                                <line x1="140" y1="70" x2="160" y2="50" />
+                                <line x1="142" y1="74" x2="162" y2="54" />
+                                <line x1="138" y1="66" x2="158" y2="46" />
+                            </g>
+
+                            <!-- Hook -->
+                            <g fill="currentColor">
+                                <circle cx="165" cy="45" r="4" />
+                                <path d="M 165 49 Q 165 55 162 58 Q 160 60 158 58" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" />
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="about.html" class="nav-link">О системе</a></li>
+                    <li><a href="features.html" class="nav-link">Возможности</a></li>
+                    <li><a href="equipment.html" class="nav-link active">Техника</a></li>
+                    <li><a href="schedule.html" class="nav-link">График ТО</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-outline" onclick="showModal(); return false;">Войти</a>
+                    <a href="#" class="btn btn-primary" onclick="showModal(); return false;">Регистрация</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <div class="container">
+                <h1>Типы оборудования</h1>
+                <nav class="breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <span>/</span>
+                    <span>Техника</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Intro -->
+    <section class="equipment-intro section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Поддерживаемая техника</span>
+                <h2 class="section-title">Все виды строительной техники</h2>
+                <p class="section-subtitle">
+                    Система STROICHECK поддерживает учёт всех типов строительного и специального оборудования
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Types -->
+    <section class="equipment-types section">
+        <div class="container">
+            <!-- Excavators -->
+            <div class="equipment-type-block">
+                <div class="equipment-type-header">
+                    <div class="equipment-type-icon large">
+                        <i class="fas fa-truck-monster"></i>
+                    </div>
+                    <div class="equipment-type-title">
+                        <h2>Экскаваторы</h2>
+                        <p>Гусеничные и колёсные экскаваторы любой мощности</p>
+                    </div>
+                </div>
+                <div class="equipment-type-content">
+                    <div class="equipment-info">
+                        <h4>Учитываемые параметры:</h4>
+                        <ul class="equipment-params">
+                            <li><i class="fas fa-check"></i> Модель и производитель</li>
+                            <li><i class="fas fa-check"></i> Год выпуска</li>
+                            <li><i class="fas fa-check"></i> Моточасы наработки</li>
+                            <li><i class="fas fa-check"></i> Вес и габариты</li>
+                            <li><i class="fas fa-check"></i> Объём ковша</li>
+                            <li><i class="fas fa-check"></i> Тип ходового устройства</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-tasks">
+                        <h4>Типовые работы ТО:</h4>
+                        <ul class="task-list">
+                            <li><span class="task-interval">ТО-1</span> Каждые 50 м/ч</li>
+                            <li><span class="task-interval">ТО-2</span> Каждые 250 м/ч</li>
+                            <li><span class="task-interval">ТО-3</span> Каждые 1000 м/ч</li>
+                            <li><span class="task-interval">СО</span> Каждые 2000 м/ч</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bulldozers -->
+            <div class="equipment-type-block alternate">
+                <div class="equipment-type-header">
+                    <div class="equipment-type-icon large">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <div class="equipment-type-title">
+                        <h2>Бульдозеры</h2>
+                        <p>Бульдозеры и погрузчики с отвалом</p>
+                    </div>
+                </div>
+                <div class="equipment-type-content">
+                    <div class="equipment-info">
+                        <h4>Учитываемые параметры:</h4>
+                        <ul class="equipment-params">
+                            <li><i class="fas fa-check"></i> Модель и производитель</li>
+                            <li><i class="fas fa-check"></i> Год выпуска</li>
+                            <li><i class="fas fa-check"></i> Моточасы наработки</li>
+                            <li><i class="fas fa-check"></i> Мощность двигателя</li>
+                            <li><i class="fas fa-check"></i> Тип отвала</li>
+                            <li><i class="fas fa-check"></i> Тип гусеницы</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-tasks">
+                        <h4>Типовые работы ТО:</h4>
+                        <ul class="task-list">
+                            <li><span class="task-interval">ТО-1</span> Каждые 50 м/ч</li>
+                            <li><span class="task-interval">ТО-2</span> Каждые 250 м/ч</li>
+                            <li><span class="task-interval">ТО-3</span> Каждые 1000 м/ч</li>
+                            <li><span class="task-interval">СО</span> Каждые 2000 м/ч</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dump Trucks -->
+            <div class="equipment-type-block">
+                <div class="equipment-type-header">
+                    <div class="equipment-type-icon large">
+                        <i class="fas fa-dumpster"></i>
+                    </div>
+                    <div class="equipment-type-title">
+                        <h2>Самосвалы</h2>
+                        <p>Карьерные и строительные самосвалы</p>
+                    </div>
+                </div>
+                <div class="equipment-type-content">
+                    <div class="equipment-info">
+                        <h4>Учитываемые параметры:</h4>
+                        <ul class="equipment-params">
+                            <li><i class="fas fa-check"></i> Модель и производитель</li>
+                            <li><i class="fas fa-check"></i> Год выпуска</li>
+                            <li><i class="fas fa-check"></i> Пробег / моточасы</li>
+                            <li><i class="fas fa-check"></i> Грузоподъёмность</li>
+                            <li><i class="fas fa-check"></i> Объём кузова</li>
+                            <li><i class="fas fa-check"></i> Тип привода</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-tasks">
+                        <h4>Типовые работы ТО:</h4>
+                        <ul class="task-list">
+                            <li><span class="task-interval">ТО-1</span> Каждые 5000 км</li>
+                            <li><span class="task-interval">ТО-2</span> Каждые 20000 км</li>
+                            <li><span class="task-interval">ТО-3</span> Каждые 40000 км</li>
+                            <li><span class="task-interval">СО</span> Каждые 80000 км</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cranes -->
+            <div class="equipment-type-block alternate">
+                <div class="equipment-type-header">
+                    <div class="equipment-type-icon large">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="equipment-type-title">
+                        <h2>Краны</h2>
+                        <p>Башенные, автокраны и гусеничные краны</p>
+                    </div>
+                </div>
+                <div class="equipment-type-content">
+                    <div class="equipment-info">
+                        <h4>Учитываемые параметры:</h4>
+                        <ul class="equipment-params">
+                            <li><i class="fas fa-check"></i> Модель и производитель</li>
+                            <li><i class="fas fa-check"></i> Год выпуска</li>
+                            <li><i class="fas fa-check"></i> Моточасы наработки</li>
+                            <li><i class="fas fa-check"></i> Грузоподъёмность</li>
+                            <li><i class="fas fa-check"></i> Высота подъёма</li>
+                            <li><i class="fas fa-check"></i> Тип крана</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-tasks">
+                        <h4>Типовые работы ТО:</h4>
+                        <ul class="task-list">
+                            <li><span class="task-interval">ТО-1</span> Каждые 50 м/ч</li>
+                            <li><span class="task-interval">ТО-2</span> Каждые 250 м/ч</li>
+                            <li><span class="task-interval">ТО-3</span> Каждые 1000 м/ч</li>
+                            <li><span class="task-interval">Переосвидетельствование</span> Ежегодно</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Road Equipment -->
+            <div class="equipment-type-block">
+                <div class="equipment-type-header">
+                    <div class="equipment-type-icon large">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="equipment-type-title">
+                        <h2>Дорожная техника</h2>
+                        <p>Катки, асфальтоукладчики, фрезы и другое оборудование</p>
+                    </div>
+                </div>
+                <div class="equipment-type-content">
+                    <div class="equipment-info">
+                        <h4>Учитываемые параметры:</h4>
+                        <ul class="equipment-params">
+                            <li><i class="fas fa-check"></i> Модель и производитель</li>
+                            <li><i class="fas fa-check"></i> Год выпуска</li>
+                            <li><i class="fas fa-check"></i> Моточасы наработки</li>
+                            <li><i class="fas fa-check"></i> Рабочая ширина</li>
+                            <li><i class="fas fa-check"></i> Тип оборудования</li>
+                            <li><i class="fas fa-check"></i> Масса</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-tasks">
+                        <h4>Типовые работы ТО:</h4>
+                        <ul class="task-list">
+                            <li><span class="task-interval">ТО-1</span> Каждые 50 м/ч</li>
+                            <li><span class="task-interval">ТО-2</span> Каждые 250 м/ч</li>
+                            <li><span class="task-interval">ТО-3</span> Каждые 1000 м/ч</li>
+                            <li><span class="task-interval">СО</span> Каждые 2000 м/ч</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Equipment -->
+            <div class="equipment-type-block alternate">
+                <div class="equipment-type-header">
+                    <div class="equipment-type-icon large">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="equipment-type-title">
+                        <h2>Другая техника</h2>
+                        <p>Настраиваемые типы под ваш парк оборудования</p>
+                    </div>
+                </div>
+                <div class="equipment-type-content">
+                    <div class="equipment-info">
+                        <h4>Дополнительные типы:</h4>
+                        <ul class="equipment-params">
+                            <li><i class="fas fa-check"></i> Погрузчики фронтальные</li>
+                            <li><i class="fas fa-check"></i> Мини-экскаваторы</li>
+                            <li><i class="fas fa-check"></i> Бетоносмесители</li>
+                            <li><i class="fas fa-check"></i> Бетононасосы</li>
+                            <li><i class="fas fa-check"></i> Генераторы</li>
+                            <li><i class="fas fa-check"></i> Компрессоры</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-tasks">
+                        <h4>Возможности настройки:</h4>
+                        <ul class="task-list">
+                            <li><i class="fas fa-check"></i> Произвольные параметры</li>
+                            <li><i class="fas fa-check"></i> Настраиваемые интервалы ТО</li>
+                            <li><i class="fas fa-check"></i> Индивидуальные графики</li>
+                            <li><i class="fas fa-check"></i> Специфические работы</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Stats -->
+    <section class="equipment-stats section">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="stat-box-number">15+</span>
+                    <span class="stat-box-label">Типов техники</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-box-number">100+</span>
+                    <span class="stat-box-label">Моделей</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-box-number">∞</span>
+                    <span class="stat-box-label">Настраиваемые типы</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-box-number">500+</span>
+                    <span class="stat-box-label">Единиц на учёте</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Не нашли свой тип техники?</h2>
+                    <p>Мы можем добавить любой тип оборудования под ваши потребности. Свяжитесь с нами для обсуждения.
+                    </p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Связаться с нами</a>
+                    <a href="#" class="btn btn-outline btn-lg" onclick="showModal(); return false;">Запросить тип</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-brand">
+                    <span class="footer-logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                    <p>Автоматизированная система управления техническим обслуживанием строительной техники</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="about.html">О системе</a></li>
+                            <li><a href="features.html">Возможности</a></li>
+                            <li><a href="equipment.html">Техника</a></li>
+                            <li><a href="schedule.html">График ТО</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Документация</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">FAQ</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Юридическое</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Политика конфиденциальности</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">Условия использования</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STROICHECK. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" onclick="hideModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3>Скоро!</h3>
+                <p>Эта функция находится в разработке. Следите за обновлениями потому что делал всё это только одиин
+                    бедный студент!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

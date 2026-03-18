@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>График ТО - STROICHECK</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Checkmark -->
+                        <g>
+                            <!-- Left part of checkmark -->
+                            <path d="M 60 110 L 85 135" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- Right part of checkmark -->
+                            <path d="M 85 135 L 140 60" stroke="currentColor" stroke-width="8" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <!-- Crane -->
+                        <g>
+                            <!-- Crane base (pulley) -->
+                            <circle cx="70" cy="155" r="12" fill="currentColor" />
+                            <rect x="58" y="150" width="24" height="10" rx="5" fill="currentColor" />
+
+                            <!-- Crane arm (boom) -->
+                            <line x1="70" y1="155" x2="140" y2="70" stroke="currentColor" stroke-width="6"
+                                stroke-linecap="round" />
+
+                            <!-- Crane jib (lattice pattern) -->
+                            <g stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round">
+                                <line x1="140" y1="70" x2="160" y2="50" />
+                                <line x1="142" y1="74" x2="162" y2="54" />
+                                <line x1="138" y1="66" x2="158" y2="46" />
+                            </g>
+
+                            <!-- Hook -->
+                            <g fill="currentColor">
+                                <circle cx="165" cy="45" r="4" />
+                                <path d="M 165 49 Q 165 55 162 58 Q 160 60 158 58" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" />
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="about.html" class="nav-link">О системе</a></li>
+                    <li><a href="features.html" class="nav-link">Возможности</a></li>
+                    <li><a href="equipment.html" class="nav-link">Техника</a></li>
+                    <li><a href="schedule.html" class="nav-link active">График ТО</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-outline" onclick="showModal(); return false;">Войти</a>
+                    <a href="#" class="btn btn-primary" onclick="showModal(); return false;">Регистрация</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <div class="container">
+                <h1>График ТО</h1>
+                <nav class="breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <span>/</span>
+                    <span>График ТО</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Demo Section -->
+    <section class="schedule-demo-section section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Демонстрация</span>
+                <h2 class="section-title">Визуальный календарь обслуживания</h2>
+                <p class="section-subtitle">
+                    Наглядное представление всех запланированных работ
+                </p>
+            </div>
+            <div class="schedule-demo-wrapper">
+                <div class="schedule-calendar">
+                    <div class="calendar-header">
+                        <button class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                        <h3>Март 2026</h3>
+                        <button class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day header">Пн</div>
+                        <div class="calendar-day header">Вт</div>
+                        <div class="calendar-day header">Ср</div>
+                        <div class="calendar-day header">Чт</div>
+                        <div class="calendar-day header">Пт</div>
+                        <div class="calendar-day header">Сб</div>
+                        <div class="calendar-day header">Вс</div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day has-event">11<div class="event-dot maintenance"></div>
+                        </div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day has-event">15<div class="event-dot repair"></div>
+                        </div>
+                        <div class="calendar-day">16</div>
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day has-event">18<div class="event-dot inspection"></div>
+                        </div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day has-event">21<div class="event-dot maintenance"></div>
+                        </div>
+                        <div class="calendar-day">22</div>
+                        <div class="calendar-day">23</div>
+                        <div class="calendar-day">24</div>
+                        <div class="calendar-day has-event">25<div class="event-dot maintenance"></div>
+                        </div>
+                        <div class="calendar-day">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day has-event">28<div class="event-dot inspection"></div>
+                        </div>
+                        <div class="calendar-day">29</div>
+                        <div class="calendar-day">30</div>
+                        <div class="calendar-day">31</div>
+                    </div>
+                </div>
+                <div class="schedule-info-panel">
+                    <div class="info-section">
+                        <h3>Легенда</h3>
+                        <div class="legend-item">
+                            <div class="legend-dot maintenance"></div>
+                            <span>Техническое обслуживание</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot repair"></div>
+                            <span>Ремонт</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot inspection"></div>
+                            <span>Инспекция</span>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <h3>Статистика месяца</h3>
+                        <div class="schedule-stats">
+                            <div class="schedule-stat">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">ТО в этом месяце</span>
+                            </div>
+                            <div class="schedule-stat">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">Ремонта</span>
+                            </div>
+                            <div class="schedule-stat">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Инспекций</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <h3>Ближайшие работы</h3>
+                        <div class="upcoming-item">
+                            <span class="upcoming-date">25 марта 2026</span>
+                            <span class="upcoming-type maintenance">ТО-1</span>
+                            <span class="upcoming-equip">Экскаватор CAT 320D</span>
+                        </div>
+                        <div class="upcoming-item">
+                            <span class="upcoming-date">28 марта 2026</span>
+                            <span class="upcoming-type inspection">Инспекция</span>
+                            <span class="upcoming-equip">Автокран 25т</span>
+                        </div>
+                        <div class="upcoming-item">
+                            <span class="upcoming-date">2 апреля 2026</span>
+                            <span class="upcoming-type maintenance">ТО-2</span>
+                            <span class="upcoming-equip">Бульдозер Komatsu D65</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Schedule Works -->
+    <section class="how-schedule-works section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Как это работает</span>
+                <h2 class="section-title">Автоматическое планирование</h2>
+                <p class="section-subtitle">
+                    Система сама создаёт график на основе данных о технике
+                </p>
+            </div>
+            <div class="schedule-steps">
+                <div class="schedule-step">
+                    <div class="step-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Сбор данных</h3>
+                    <p>Система собирает информацию о наработке, пробеге и состоянии каждой единицы техники</p>
+                </div>
+                <div class="schedule-step">
+                    <div class="step-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Расчёт интервалов</h3>
+                    <p>Автоматический расчёт дат ТО на основе производственных норм и рекомендаций</p>
+                </div>
+                <div class="schedule-step">
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Формирование графика</h3>
+                    <p>Создание оптимального графика с учётом загрузки и сезонности работ</p>
+                </div>
+                <div class="schedule-step">
+                    <div class="step-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Уведомления</h3>
+                    <p>Автоматические напоминания ответственным лицам о предстоящих работах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Types -->
+    <section class="maintenance-types section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Виды работ</span>
+                <h2 class="section-title">Типы обслуживания</h2>
+                <p class="section-subtitle">
+                    Система учитывает все виды технического обслуживания
+                </p>
+            </div>
+            <div class="maintenance-grid">
+                <div class="maintenance-card">
+                    <div class="maintenance-header">
+                        <span class="maintenance-type">ТО-1</span>
+                        <span class="maintenance-interval">Ежедневно / 50 м/ч</span>
+                    </div>
+                    <div class="maintenance-content">
+                        <h4>Работы:</h4>
+                        <ul>
+                            <li>Визуальный осмотр</li>
+                            <li>Проверка уровней жидкостей</li>
+                            <li>Контроль давления в шинах</li>
+                            <li>Очистка фильтров</li>
+                            <li>Смазка узлов</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="maintenance-card">
+                    <div class="maintenance-header">
+                        <span class="maintenance-type">ТО-2</span>
+                        <span class="maintenance-interval">250 м/ч</span>
+                    </div>
+                    <div class="maintenance-content">
+                        <h4>Работы:</h4>
+                        <ul>
+                            <li>Замена масла и фильтров</li>
+                            <li>Проверка тормозной системы</li>
+                            <li>Регулировка механизмов</li>
+                            <li>Диагностика электросистемы</li>
+                            <li>Проверка гидравлики</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="maintenance-card">
+                    <div class="maintenance-header">
+                        <span class="maintenance-type">ТО-3</span>
+                        <span class="maintenance-interval">1000 м/ч</span>
+                    </div>
+                    <div class="maintenance-content">
+                        <h4>Работы:</h4>
+                        <ul>
+                            <li>Полная диагностика</li>
+                            <li>Замена расходников</li>
+                            <li>Регулировка клапанов</li>
+                            <li>Проверка ходовой части</li>
+                            <li>Компьютерная диагностика</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notifications Section -->
+    <section class="notifications-section section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Уведомления</span>
+                <h2 class="section-title">Напоминания о ТО</h2>
+                <p class="section-subtitle">
+                    Никаких пропущенных обслуживаний
+                </p>
+            </div>
+            <div class="notifications-grid">
+                <div class="notification-card">
+                    <div class="notification-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email-уведомления</h3>
+                    <p>Напоминания на электронную почту ответственных лиц с деталями предстоящих работ</p>
+                </div>
+                <div class="notification-card">
+                    <div class="notification-icon">
+                        <i class="fas fa-sms"></i>
+                    </div>
+                    <h3>SMS-оповещения</h3>
+                    <p>Краткие SMS-сообщения с关键 информацией о приближающемся ТО</p>
+                </div>
+                <div class="notification-card">
+                    <div class="notification-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Push-уведомления</h3>
+                    <p>Мгновенные уведомления в мобильном приложении STROICHECK</p>
+                </div>
+            </div>
+            <div class="notification-schedule">
+                <h3>График напоминаний</h3>
+                <div class="schedule-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">За 7 дней</span>
+                        <span class="timeline-desc">Первое предупреждение о предстоящем ТО</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">За 3 дня</span>
+                        <span class="timeline-desc">Напоминание с уточнением деталей работ</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">За 1 день</span>
+                        <span class="timeline-desc">Финальное напоминание о завтрашнем ТО</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">В день ТО</span>
+                        <span class="timeline-desc">Утреннее уведомление о сегодняшних работах</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Начните планировать ТО эффективно</h2>
+                    <p>Попробуйте STROICHECK бесплатно и оцените удобство автоматического планирования</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-lg" onclick="showModal(); return false;">Начать бесплатно</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-brand">
+                    <span class="footer-logo-text">STROI<span class="logo-accent">CHECK</span></span>
+                    <p>Автоматизированная система управления техническим обслуживанием строительной техники</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="about.html">О системе</a></li>
+                            <li><a href="features.html">Возможности</a></li>
+                            <li><a href="equipment.html">Техника</a></li>
+                            <li><a href="schedule.html">График ТО</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Документация</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">FAQ</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Юридическое</h4>
+                        <ul>
+                            <li><a href="#" onclick="showModal(); return false;">Политика конфиденциальности</a></li>
+                            <li><a href="#" onclick="showModal(); return false;">Условия использования</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 STROICHECK. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" onclick="hideModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3>Скоро!</h3>
+                <p>Эта функция находится в разработке. Следите за обновлениями потому что делал всё это только одиин
+                    бедный студент!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
